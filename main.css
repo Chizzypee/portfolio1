@@ -25,34 +25,25 @@ body{
 nav{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: center;    
     height: 10vh;
     width: 100%;
 }
 .nav-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     font-size: 10px;
-    margin-left: 50px;
 }
 .navbar{
     width: 100%;
-    height: 10vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}
-.navbar ul{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    font-weight: 700;
-}
-.navbar a{
-    color: black;
 }
 .prifle-con{
     display: flex;
@@ -101,6 +92,7 @@ nav{
     gap: 10px;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 .proBtn a{
     display: flex;
@@ -119,10 +111,17 @@ nav{
     border-radius: 20px;
     padding: 5px;
     width: 100%;
+    border: 1px solid black;
+    cursor: pointer;
 }
 .downloadcv:hover{
     background-color: black;
     color: white;
+}
+.github:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }
 .contact:hover{
     background-color: white;
@@ -151,12 +150,18 @@ nav{
     align-items: center;
     width: 100%;
 }
+.abt-head h1{
+    font-size: 20px;
+}
 .exp-head{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+.exp-head h1{
+    font-size: 20px;
 }
 .proj-head{
     display: flex;
@@ -165,12 +170,18 @@ nav{
     align-items: center;
     width: 100%;
 }
+.proj-head h1{
+    font-size: 20px;
+}
 .cont-head{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+.cont-head h1{
+    font-size: 20px;
 }
 .abtimg{
     width: 100%;
@@ -224,12 +235,6 @@ nav{
 .box .Aname{
     font-weight: 700;
 }
-.experience{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-}
 .project{
     display: flex;
     flex-direction: column;
@@ -237,72 +242,77 @@ nav{
     width: 100%;
     
 }
-.exp-con{
+.experience{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 20px;
 }
-.expbox{
+.exp-con{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+.expbox{    
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
-    width: 40%;
+    justify-content: center;
+    width: 50%;
     height: 50vh;
     border-radius: 30px;
     font-weight: 500;
-}
-.expbox-con{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    gap: 30px;
-    margin-left: 30px;
+    border: 1px solid black;
 }
 .boxhead{
     font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 .boxrowIMG{
-    width: 10%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.approveIMG{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+    height: 10vh;
 }
 .approve{
-    width: 100%;
+    width: 20%;
 }
 .boxx{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .boxrow{
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
     gap: 20px;
+    width: 100%;
+    align-items: center;
     justify-content: center;
 }
 .boxtext{
     display: flex;
     flex-direction: column;
-    width: 70%;
+    gap: 5px;
 }
 .btext{
     font-weight: 400;
     font-size: 12px;
-}
-.expbox{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-    width: 40%;
-    height: 50vh;
-    border-radius: 30px;
-    font-weight: 500;
 }
 .project-content{
     display: flex;
@@ -379,7 +389,6 @@ nav{
 .booo{
     display: flex;
     flex-direction: row;
-    /* gap: 20px; */
     width: 50%;
     padding: 10px;
     border-radius: 30px;
@@ -429,19 +438,15 @@ footer{
 
 /* MEDIA */
 
-@media screen and (min-width: px) {
+@media screen and (min-width: 320px) {
     *{
         font-size: 9px;
     }
-    .navbar ul{
-        width: 100%;
-        gap: 5px;
-    }
-    .nav-name{
-        width: 100%;
+    nav{
+        margin-top: 10px;
     }
     .prifle-con{
-        height: 70vh;
+        height: 50vh;
     }
     .pro{
         display: flex;
@@ -449,6 +454,7 @@ footer{
         align-items: center;
         justify-content: center;
         gap: 20px;
+        width: 100%;
     }
     .pro-info{
         width: 100%;
@@ -466,9 +472,8 @@ footer{
     .abtme-con{
         display: flex;
         flex-direction: column;
-        height: 100vh;
-        margin-bottom: 40px;
         gap: 20px;
+        width: 100%;
     }
     .abtimg{
         width: 100%;
@@ -482,32 +487,18 @@ footer{
         justify-content: center;
     }
     .box{
-        width: 80%;
-        height: 15vh;
-    }
-    .abtinfo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
+        height: 10vh;
     }
     .abtinfo2{
-        width: 80%;
+        width: 100%;
     }
     .experience{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
-        margin-top: 30px;
-        gap: 10px;
     }
     .exp-con{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
     }
     .expbox{
         display: flex;
@@ -515,36 +506,39 @@ footer{
         justify-content: center;
         align-items: center;
         width: 80%;
-        height: 50vh;
+        height: 40vh;
         
     }
     .expbox-con{
-        margin: 0px;
-        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        /* width: 50%; */
     }
     .boxx{
         display: flex;
         flex-direction: column;
-        gap: 5px;
-
+    }
+    .boxrowIMG{
+        gap: 0px;
+        height: 6vh;
     }
     .proj-head{
-        margin-bottom: 60px;
+        margin-bottom: 20px;
     }
     .project{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
     }
     .proj-con{
         display: flex;
         flex-direction: column;
         height: 100vh;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
     }
     .probox{
-        width: 50%;
-        height: 30vh;
+        width: 80%;
+        height: 25vh;
     }
     .proBtn{
         margin-bottom: 10px;
@@ -561,7 +555,7 @@ footer{
         font-size: 12px;
     }
     .contactme{
-        height: 30vh;
+        height: 10vh;
     }
     .contactme-con{
         margin: 0px;
@@ -572,45 +566,49 @@ footer{
         width: 60%;
     }
     .footer-copyright p{
-        font-size: 7px;
+        font-size: 5px;
     }
 }
-@media screen and (min-width: 344px) {
+
+@media screen and (min-width: 375px) {
     *{
         font-size: 9px;
     }
-    .navbar ul{
-        width: 100%;
-        gap: 5px;
-    }
-    .nav-name{
-        width: 100%;
+    nav{
+        margin-top: 10px;
     }
     .prifle-con{
-        height: 30vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 20px;
+        width: 100%;
     }
     .pro-info{
         width: 100%;
     }
     .pro-img{
+        width: 100%;
         justify-content: center;
     }
     .proBtn a{
         width: 30%;
     }
     .aboutme{
-        height: 60vh;
+        height: 100vh;
     }
     .abtme-con{
         display: flex;
         flex-direction: column;
         gap: 20px;
+        width: 100%;
+    }
+    .abtimg{
+        width: 100%;
     }
     .abt-head{
         margin-bottom: 20px;
@@ -621,44 +619,63 @@ footer{
         justify-content: center;
     }
     .box{
-        width: 70%;
+        width: 100%;
         height: 10vh;
     }
     .abtinfo2{
         width: 100%;
     }
     .experience{
-        height: 50vh;
+        height: 100vh;
     }
     .exp-con{
         display: flex;
         flex-direction: column;
-        height: 100vh;
     }
     .expbox{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 70%;
-        height: 20vh;
+        width: 80%;
+        height: 40vh;
         
     }
     .expbox-con{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
         margin: 0px;
-        gap: 10px;
+    }
+    .boxx{
+        display: flex;
+        flex-direction: column;
     }
     .proj-head{
         margin-bottom: 20px;
     }
+    .project{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .project-content{
+        width: 100%;
+        height: 100vh;
+        margin-top: 100px;
+    }
     .proj-con{
         display: flex;
         flex-direction: column;
-        height: 70vh;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
     .probox{
-        width: 50%;
-        height: 20vh;
+        width: 60%;
+        height: 30vh;
     }
     .proBtn{
         margin-bottom: 10px;
@@ -675,7 +692,7 @@ footer{
         font-size: 12px;
     }
     .contactme{
-        height: 10vh;
+        height: 50vh;
     }
     .contactme-con{
         margin: 0px;
@@ -686,10 +703,11 @@ footer{
         width: 60%;
     }
     .footer-copyright p{
-        font-size: 7px;
+        font-size: 5px;
     }
 }
-@media screen and (min-width: 375px) {
+
+@media screen and (min-width: 344px) {
     *{
         font-size: 10px;
     }
@@ -700,7 +718,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 50vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -734,8 +752,8 @@ footer{
         justify-content: center;
     }
     .box{
-        width: 70%;
-        height: 20vh;
+        width: 100%;
+        height: 10vh;
     }
     .abtinfo2{
         width: 100%;
@@ -754,12 +772,16 @@ footer{
         justify-content: center;
         align-items: center;
         width: 70%;
-        height: 30vh;
-        
+        height: 40vh;
     }
     .expbox-con{
         margin: 0px;
         gap: 10px;
+    }
+    .project-content{
+        width: 100%;
+        height: 100vh;
+        margin-top: 100px;
     }
     .proj-head{
         margin-bottom: 20px;
@@ -770,7 +792,7 @@ footer{
         height: 100vh;
     }
     .probox{
-        width: 50%;
+        width: 70%;
         height: 30vh;
     }
     .proBtn{
@@ -781,14 +803,14 @@ footer{
         padding: 0px;
     }
     .proimg{
-        width: 900%;
+        width: 90%;
         margin-top: 20px;
     }
     .probox .pname{
         font-size: 12px;
     }
     .contactme{
-        height: 30vh;
+        height: 50vh;
     }
     .contactme-con{
         margin: 0px;
@@ -802,6 +824,7 @@ footer{
         font-size: 7px;
     }
 }
+
 @media screen and (min-width: 414px) {
     *{
         font-size: 10px;
@@ -813,7 +836,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 40vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -832,7 +855,7 @@ footer{
         width: 30%;
     }
     .aboutme{
-        height: 60vh;
+        height: 100vh;
     }
     .abtme-con{
         display: flex;
@@ -848,14 +871,14 @@ footer{
         justify-content: center;
     }
     .box{
-        width: 70%;
+        width: 100%;
         height: 10vh;
     }
     .abtinfo2{
         width: 100%;
     }
     .experience{
-        height: 60vh;
+        height: 100vh;
     }
     .exp-con{
         display: flex;
@@ -871,15 +894,14 @@ footer{
         justify-content: center;
         align-items: center;
         width: 60%;
-        height: 20vh;
-        
+        height: 40vh;
     }
     .expbox-con{
         margin: 0px;
         gap: 10px;
     }
     .project{
-        height: 70vh;
+        height: 100vh;
     }
     .proj-con{
         display: flex;
@@ -888,8 +910,8 @@ footer{
         align-content: center;
     }
     .probox{
-        width: 50%;
-        height: 20vh;
+        width: 70%;
+        height: 30vh;
     }
     .proBtn{
         margin-bottom: 10px;
@@ -906,7 +928,7 @@ footer{
         font-size: 12px;
     }
     .contactme{
-        height: 25vh;
+        height: 50vh;
     }
     .contactme-con{
         margin: 0px;
@@ -920,6 +942,7 @@ footer{
         font-size: 7px;
     }
 }
+
 @media screen and (min-width: 390px) {
     *{
         font-size: 10px;
@@ -931,7 +954,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 40vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -944,13 +967,14 @@ footer{
         width: 100%;
     }
     .pro-img{
+        width: 100%;
         justify-content: center;
     }
     .proBtn a{
         width: 30%;
     }
     .aboutme{
-        height: 60vh;
+        height: 100vh;
     }
     .abtme-con{
         display: flex;
@@ -966,14 +990,14 @@ footer{
         justify-content: center;
     }
     .box{
-        width: 70%;
+        width: 100%;
         height: 10vh;
     }
     .abtinfo2{
         width: 100%;
     }
     .experience{
-        height: 60vh;
+        height: 100vh;
     }
     .exp-con{
         display: flex;
@@ -989,7 +1013,7 @@ footer{
         justify-content: center;
         align-items: center;
         width: 60%;
-        height: 20vh;
+        height: 40vh;
         
     }
     .expbox-con{
@@ -997,13 +1021,14 @@ footer{
         gap: 10px;
     }
     .project{
-        height: 80vh;
+        height: 100vh;
     }
     .proj-con{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        height: 100vh;
     }
     .probox{
         width: 60%;
@@ -1024,7 +1049,7 @@ footer{
         font-size: 12px;
     }
     .contactme{
-        height: 30vh;
+        height: 50vh;
     }
     .contactme-con{
         margin: 0px;
@@ -1038,6 +1063,7 @@ footer{
         font-size: 7px;
     }
 }
+
 @media screen and (min-width: 430px) {
     *{
         font-size: 10px;
@@ -1049,7 +1075,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 40vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -1068,7 +1094,7 @@ footer{
         width: 30%;
     }
     .aboutme{
-        height: 60vh;
+        height: 100vh;
     }
     .abtme-con{
         display: flex;
@@ -1084,22 +1110,19 @@ footer{
         justify-content: center;
     }
     .box{
-        width: 70%;
+        width: 100%;
         height: 10vh;
     }
     .abtinfo2{
         width: 100%;
     }
     .experience{
-        height: 60vh;
+        height: 100vh;
     }
     .exp-con{
         display: flex;
         flex-direction: column;
         height: 100vh;
-    }
-    .exp-head{
-
     }
     .expbox{
         display: flex;
@@ -1107,15 +1130,14 @@ footer{
         justify-content: center;
         align-items: center;
         width: 60%;
-        height: 20vh;
-        
+        height: 40vh;
     }
     .expbox-con{
         margin: 0px;
         gap: 10px;
     }
     .project{
-        height: 80vh;
+        height: 100vh;
     }
     .proj-con{
         display: flex;
@@ -1124,8 +1146,8 @@ footer{
         align-content: center;
     }
     .probox{
-        width: 60%;
-        height: 25vh;
+        width: 70%;
+        height: 30vh;
     }
     .proBtn{
         margin-bottom: 10px;
@@ -1142,7 +1164,7 @@ footer{
         font-size: 12px;
     }
     .contactme{
-        height: 35vh;
+        height: 50vh;
     }
     .contactme-con{
         margin: 0px;
@@ -1156,6 +1178,7 @@ footer{
         font-size: 7px;
     }
 }
+
 @media screen and (min-width: 412px) {
     *{
         font-size: 10px;
@@ -1167,7 +1190,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 40vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -1186,7 +1209,7 @@ footer{
         width: 30%;
     }
     .aboutme{
-        height: 60vh;
+        height: 100vh;
     }
     .abtme-con{
         display: flex;
@@ -1202,14 +1225,14 @@ footer{
         justify-content: center;
     }
     .box{
-        width: 70%;
+        width: 100%;
         height: 10vh;
     }
     .abtinfo2{
         width: 100%;
     }
     .experience{
-        height: 60vh;
+        height: 100vh;
     }
     .exp-con{
         display: flex;
@@ -1225,7 +1248,7 @@ footer{
         justify-content: center;
         align-items: center;
         width: 60%;
-        height: 20vh;
+        height: 40vh;
         
     }
     .expbox-con{
@@ -1233,7 +1256,7 @@ footer{
         gap: 10px;
     }
     .project{
-        height: 80vh;
+        height: 100vh;
     }
     .proj-con{
         display: flex;
@@ -1243,7 +1266,7 @@ footer{
     }
     .probox{
         width: 60%;
-        height: 25vh;
+        height: 30vh;
     }
     .proBtn{
         margin-bottom: 10px;
@@ -1260,7 +1283,7 @@ footer{
         font-size: 12px;
     }
     .contactme{
-        height: 30vh;
+        height: 50vh;
     }
     .contactme-con{
         margin: 0px;
@@ -1274,6 +1297,7 @@ footer{
         font-size: 7px;
     }
 }
+
 @media screen and (min-width: 360px) {
     *{
         font-size: 10px;
@@ -1286,7 +1310,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 40vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -1305,7 +1329,7 @@ footer{
         width: 30%;
     }
     .aboutme{
-        height: 80vh;
+        height: 100vh;
     }
     .abtme-con{
         display: flex;
@@ -1321,14 +1345,14 @@ footer{
         justify-content: center;
     }
     .box{
-        width: 75%;
-        height: 15vh;
+        width: 100%;
+        height: 10vh;
     }
     .abtinfo2{
         width: 100%;
     }
     .experience{
-        height: 70vh;
+        height: 100vh;
     }
     .exp-con{
         display: flex;
@@ -1344,7 +1368,7 @@ footer{
         justify-content: center;
         align-items: center;
         width: 70%;
-        height: 25vh;
+        height: 40vh;
         
     }
     .expbox-con{
@@ -1352,7 +1376,7 @@ footer{
         gap: 10px;
     }
     .project{
-        height: 90vh;
+        height: 100vh;
     }
     .proj-con{
         display: flex;
@@ -1362,7 +1386,7 @@ footer{
     }
     .probox{
         width: 60%;
-        height: 29vh;
+        height: 30vh;
     }
     .proBtn{
         margin-bottom: 10px;
@@ -1379,7 +1403,7 @@ footer{
         font-size: 12px;
     }
     .contactme{
-        height: 20vh;
+        height: 50vh;
     }
     .contactme-con{
         margin: 0px;
@@ -1393,9 +1417,10 @@ footer{
         font-size: 7px;
     }
 }
+
 @media screen and (min-width: 768px) {
     *{
-        font-size: 15px;
+        font-size: 17px;
     }
     .navbar ul{
         width: 100%;
@@ -1405,7 +1430,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 50vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -1420,11 +1445,14 @@ footer{
     .pro-img{
         justify-content: center;
     }
+    .profile{
+        border-radius: 300px;
+    }
     .proBtn a{
         width: 30%;
     }
     .aboutme{
-        height: 90vh;
+        height: 100vh;
     }
     .abtme-con{
         display: flex;
@@ -1440,7 +1468,7 @@ footer{
         justify-content: center;
     }
     .box{
-        width: 60%;
+        width: 100%;
         height: 15vh;
     }
     .abtinfo2{
@@ -1512,6 +1540,7 @@ footer{
         font-size: 10px;
     }
 }
+
 @media screen and (min-width: 820px) {
     *{
         font-size: 17px;
@@ -1524,7 +1553,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 50vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -1631,6 +1660,7 @@ footer{
         font-size: 10px;
     }
 }
+
 @media screen and (min-width: 853px) {
     *{
         font-size: 19px;
@@ -1643,7 +1673,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 50vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -1750,6 +1780,7 @@ footer{
         font-size: 10px;
     }
 }
+
 @media screen and (min-width: 1024px) {
     *{
         font-size: 20px;
@@ -1762,7 +1793,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 50vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -1870,6 +1901,7 @@ footer{
         font-size: 10px;
     }
 }
+
 @media screen and (min-width: 912px) {
     *{
         font-size: 20px;
@@ -1882,7 +1914,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 50vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -1990,6 +2022,7 @@ footer{
         font-size: 10px;
     }
 }
+
 @media screen and (min-width: 540px) {
     *{
         font-size: 13px;
@@ -2002,7 +2035,7 @@ footer{
         width: 100%;
     }
     .prifle-con{
-        height: 60vh;
+        height: 100vh;
     }
     .pro{
         display: flex;
@@ -2036,21 +2069,23 @@ footer{
         flex-direction: column;
         justify-content: center;
     }
+    .abtpics{
+        width: 40%;
+    }
     .box{
-        width: 70%;
+        width: 100%;
         height: 15vh;
     }
     .abtinfo2{
         width: 100%;
     }
     .experience{
-        height: 90vh;
+        height: 100vh;
     }
     .exp-con{
         display: flex;
         flex-direction: column;
         height: 100vh;
-        
     }
     .expbox{
         display: flex;
@@ -2058,7 +2093,7 @@ footer{
         justify-content: center;
         align-items: center;
         width: 60%;
-        height: 30vh;
+        height: 40vh;
         
     }
     .expbox-con{
@@ -2080,7 +2115,7 @@ footer{
     }
     .probox{
         width: 50%;
-        height: 30vh;
+        height: 40vh;
     }
     .proBtn{
         margin-bottom: 10px;
@@ -2090,14 +2125,14 @@ footer{
         padding: 0px;
     }
     .proimg{
-        width: 70%;
-        height: 13vh;
+        width: 90%;
+        height: 15vh;
     }
     .probox .pname{
         font-size: 15px;
     }
     .contactme{
-        height: 35vh;
+        height: 50vh;
     }
     .contactme-con{
         margin: 0px;
@@ -2111,6 +2146,7 @@ footer{
         font-size: 10px;
     }
 }
+
 @media screen and (min-width: 1024px) {
     *{
         font-size: 15px;
@@ -2147,18 +2183,29 @@ footer{
     .abtme-con{
         display: flex;
         flex-direction: row;
+        width: 90%;
     }
     .abtbox{
         display: flex;
         flex-direction: row;
         justify-content: start;
+        width: 100%;
     }
     .box{
-        width: 40%;
+        width: 100%;
         height: 20vh;
     }
+    .abtimg{
+        width: 100%;
+    }
+    .abtpics{
+        width: 70%;
+    }
+    .abtinfo{
+        width: 100%;
+    }
     .abtinfo2{
-        width: 80%;
+        width: 100%;
         font-weight: 600;
     }
     .experience{
@@ -2178,6 +2225,10 @@ footer{
         width: 40%;
         height: 40vh;
     }
+    .boxx{
+        display: flex;
+        flex-direction: row;
+    }
     .project{
         height: 100vh;
     }
@@ -2186,9 +2237,10 @@ footer{
         flex-direction: row;
         justify-content: center;
         align-content: center;
+        width: 90%;
     }
     .probox{
-        width: 25%;
+        width: 50%;
         height: 50vh;
     }
     .proBtn{
@@ -2200,13 +2252,13 @@ footer{
     }
     .proimg{
         width: 90%;
-        height: 25vh;
+        height: 30vh;
     }
     .probox .pname{
         font-size: 15px;
     }
     .contactme{
-        height: 40vh;
+        height: 50vh;
     }
     .contactme-con{
         margin: 0px;
@@ -2220,6 +2272,7 @@ footer{
         font-size: 12px;
     }
 }
+
 @media screen and (min-width: 1280px) {
     *{
         font-size: 15px;
@@ -2263,11 +2316,11 @@ footer{
         justify-content: start;
     }
     .box{
-        width: 40%;
+        width: 50%;
         height: 20vh;
     }
     .abtinfo2{
-        width: 80%;
+        width: 100%;
         font-weight: 600;
     }
     .experience{
@@ -2297,7 +2350,7 @@ footer{
         align-content: center;
     }
     .probox{
-        width: 30%;
+        width: 50%;
         height: 50vh;
     }
     .proBtn{
@@ -2309,13 +2362,13 @@ footer{
     }
     .proimg{
         width: 90%;
-        height: 25vh;
+        height: 30vh;
     }
     .probox .pname{
         font-size: 15px;
     }
     .contactme{
-        height: 40vh;
+        height: 50vh;
     }
     .contactme-con{
         margin: 0px;
